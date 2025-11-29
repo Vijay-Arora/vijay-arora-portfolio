@@ -10,16 +10,16 @@ dotenv.config();
 const app = express();
 const PORT = process.env.PORT || 3001;
 
-// Initialize Supabase client
+// Initialize Supabase client (optional)
 const supabaseUrl = process.env.SUPABASE_URL;
 const supabaseKey = process.env.SUPABASE_KEY;
 
-if (!supabaseUrl || !supabaseKey) {
-  console.error('Missing SUPABASE_URL or SUPABASE_KEY environment variables');
-  process.exit(1);
+let supabase = null;
+if (supabaseUrl && supabaseKey) {
+  supabase = createClient(supabaseUrl, supabaseKey);
+} else {
+  console.warn('Supabase not configured - database features will be disabled');
 }
-
-const supabase = createClient(supabaseUrl, supabaseKey);
 
 // Initialize email transporter
 const createTransporter = () => {
@@ -67,6 +67,20 @@ app.use(cors({
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+
+// Root endpoint
+app.get('/', (req, res) => {
+  res.json({ 
+    success: true, 
+    message: 'Portfolio API Server',
+    version: '1.0.0',
+    endpoints: {
+      health: '/api/health',
+      projects: '/api/projects',
+      contact: '/api/contact'
+    }
+  });
+});
 
 // Health check endpoint
 app.get('/api/health', (req, res) => {
@@ -130,7 +144,7 @@ app.post('/api/contact', async (req, res) => {
 
     // Insert into Supabase (optional - comment out if you don't want to save to DB)
     let savedData = null;
-    if (supabaseUrl && supabaseKey) {
+    if (supabase) {
       const { data, error } = await supabase
         .from('contacts')
         .insert([
