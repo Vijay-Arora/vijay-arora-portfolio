@@ -69,7 +69,7 @@ const Contact = () => {
       // Determine API URL based on environment
       const apiUrl = import.meta.env.VITE_API_URL || 
                      (import.meta.env.PROD 
-                       ? 'https://vijay-arora-portfolio.vercel.app' 
+                       ? 'https://vijay-arora-portfolio-api.vercel.app' 
                        : 'http://localhost:3001');
       
       const response = await fetch(`${apiUrl}/api/contact`, {
