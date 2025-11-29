@@ -15,11 +15,11 @@ const Hero = () => {
   };
 
   return (
-    <section className="min-h-screen flex items-center justify-center px-4 pt-20">
+    <section className="min-h-screen flex items-center justify-center px-4 sm:px-6 pt-20 pb-12 sm:pb-20">
       <div className="container max-w-6xl mx-auto">
         <div className="text-center animate-fade-in">
           {/* Main Headline */}
-          <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight">
+          <h1 className="text-4xl sm:text-5xl md:text-7xl font-bold mb-4 sm:mb-6 leading-tight px-2">
             Experienced{" "}
             <span className="gradient-text">Data Scientist</span>
             <br />
@@ -28,13 +28,13 @@ const Hero = () => {
           </h1>
 
           {/* Subheadline */}
-          <p className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-4xl mx-auto leading-relaxed">
+          <p className="text-lg sm:text-xl md:text-2xl text-muted-foreground mb-6 sm:mb-8 max-w-4xl mx-auto leading-relaxed px-4">
             I build Dashapps, Automation Workflows, ML models & Scraping Scripts.<br/>
             Open to work and collaborations.
           </p>
 
           {/* CTAs */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+          <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center mb-8 sm:mb-12 px-4">
             <Button
               size="lg"
               className="hover-glow text-lg px-8 py-6"
@@ -55,9 +55,9 @@ const Hero = () => {
           </div>
 
           {/* KPI Cards */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto animate-slide-up">
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6 max-w-4xl mx-auto animate-slide-up px-4">
             {kpis.map((kpi, index) => (
-              <Card key={index} className="glass-card hover-glow p-6 group">
+              <Card key={index} className="glass-card hover-glow p-4 sm:p-6 group">
                 <div className="flex items-center justify-center mb-4">
                   <kpi.icon className="w-8 h-8 text-primary group-hover:text-primary-glow transition-colors" />
                 </div>

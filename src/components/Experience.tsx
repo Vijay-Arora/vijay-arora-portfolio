@@ -79,7 +79,7 @@ const Experience = () => {
               {experiences.map((exp, index) => (
                 <Card 
                   key={index} 
-                  className="glass-card hover-glow p-5 animate-slide-up"
+                  className="glass-card hover-glow p-4 sm:p-5 animate-slide-up"
                   style={{ animationDelay: `${index * 0.2}s` }}
                 >
                   <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between mb-3">

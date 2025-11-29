@@ -79,13 +79,13 @@ const Skills = () => {
           {skillCategories.map((category, index) => (
             <Card 
               key={category.category} 
-              className="glass-card hover-glow p-6 animate-slide-up"
+              className="glass-card hover-glow p-4 sm:p-6 animate-slide-up"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
               <h3 className="text-xl font-semibold mb-4 text-foreground">
                 {category.category}
               </h3>
-              <div className="flex flex-wrap gap-3">
+              <div className="flex flex-wrap gap-2 sm:gap-3">
                 {category.skills.map((skill) => (
                   <Badge
                     key={skill}

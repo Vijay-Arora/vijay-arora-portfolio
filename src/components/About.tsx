@@ -34,10 +34,10 @@ const About = () => {
           </h2>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+        <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
           {/* About Text */}
           <div className="animate-slide-up">
-            <Card className="glass-card p-8 h-full">
+            <Card className="glass-card p-6 sm:p-8 h-full">
               <div className="prose prose-lg prose-invert max-w-none">
                 <p className="text-lg leading-relaxed text-foreground text-justify">
                   Hi — I'm <span className="gradient-text font-semibold">Vijay Arora</span>, a results-driven Senior Investments Data Analyst with 6+ years of experience. I blend data science with financial and insurance analytics to deliver clear, actionable insights. I specialize in EDA, machine learning, building dashapps and automation frameworks that improve decision-making and operational efficiency. I focus on stakeholder management, reproducible workflows, and using data to solve real business problems.
@@ -47,7 +47,7 @@ const About = () => {
           </div>
 
           {/* Highlights Grid */}
-          <div className="grid grid-cols-2 gap-6 animate-slide-up">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6 animate-slide-up">
             {highlights.map((item, index) => (
               <Card key={index} className="glass-card hover-glow p-6 group">
                 <div className="flex flex-col items-center text-center">
