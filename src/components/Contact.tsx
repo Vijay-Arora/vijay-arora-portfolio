@@ -153,7 +153,7 @@ const Contact = () => {
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-12 items-start">
+        <div className="grid lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-12 items-start w-full">
           {/* Contact Information */}
           <div className="space-y-5 sm:space-y-6 lg:space-y-8">
             <div className="animate-slide-up">
@@ -163,11 +163,11 @@ const Contact = () => {
               
               {/* Email */}
               <Card className="glass-card hover-glow p-4 sm:p-6 mb-4">
-                <div className="flex items-center justify-between gap-3">
-                  <div className="flex items-center gap-3 sm:gap-4 flex-1 min-w-0">
+                <div className="flex items-center justify-between gap-2 sm:gap-3">
+                  <div className="flex items-center gap-2 sm:gap-3 md:gap-4 flex-1 min-w-0">
                     <Mail className="w-5 h-5 sm:w-6 sm:h-6 text-primary flex-shrink-0" />
-                    <div className="min-w-0 flex-1">
-                      <p className="font-medium text-foreground text-sm sm:text-base">Email</p>
+                    <div className="min-w-0 flex-1 overflow-hidden">
+                      <p className="font-medium text-foreground text-sm sm:text-base truncate">Email</p>
                       <p className="text-muted-foreground text-xs sm:text-sm truncate">{contactInfo.email}</p>
                     </div>
                   </div>
@@ -175,7 +175,7 @@ const Contact = () => {
                     variant="ghost"
                     size="sm"
                     onClick={() => copyToClipboard(contactInfo.email, "email")}
-                    className="hover-glow flex-shrink-0"
+                    className="hover-glow flex-shrink-0 p-2"
                   >
                     {copiedEmail ? <Check className="w-4 h-4" /> : <Copy className="w-4 h-4" />}
                   </Button>
@@ -184,11 +184,11 @@ const Contact = () => {
 
               {/* Phone */}
               <Card className="glass-card hover-glow p-4 sm:p-6">
-                <div className="flex items-center justify-between gap-3">
-                  <div className="flex items-center gap-3 sm:gap-4 flex-1 min-w-0">
+                <div className="flex items-center justify-between gap-2 sm:gap-3">
+                  <div className="flex items-center gap-2 sm:gap-3 md:gap-4 flex-1 min-w-0">
                     <Phone className="w-5 h-5 sm:w-6 sm:h-6 text-primary flex-shrink-0" />
-                    <div className="min-w-0 flex-1">
-                      <p className="font-medium text-foreground text-sm sm:text-base">Phone</p>
+                    <div className="min-w-0 flex-1 overflow-hidden">
+                      <p className="font-medium text-foreground text-sm sm:text-base truncate">Phone</p>
                       <p className="text-muted-foreground text-xs sm:text-sm">{contactInfo.phone}</p>
                     </div>
                   </div>
@@ -196,7 +196,7 @@ const Contact = () => {
                     variant="ghost"
                     size="sm"
                     onClick={() => copyToClipboard(contactInfo.phone, "phone")}
-                    className="hover-glow flex-shrink-0"
+                    className="hover-glow flex-shrink-0 p-2"
                   >
                     {copiedPhone ? <Check className="w-4 h-4" /> : <Copy className="w-4 h-4" />}
                   </Button>
@@ -216,11 +216,11 @@ const Contact = () => {
                       href={social.url}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex items-center gap-3 sm:gap-4 w-full text-left"
+                      className="flex items-center gap-2 sm:gap-3 md:gap-4 w-full text-left"
                     >
                       <social.icon className="w-5 h-5 text-primary flex-shrink-0" />
-                      <div className="min-w-0 flex-1">
-                        <p className="font-medium text-foreground text-sm sm:text-base">{social.name}</p>
+                      <div className="min-w-0 flex-1 overflow-hidden">
+                        <p className="font-medium text-foreground text-sm sm:text-base truncate">{social.name}</p>
                         <p className="text-xs sm:text-sm text-muted-foreground truncate">{social.handle}</p>
                       </div>
                     </a>
