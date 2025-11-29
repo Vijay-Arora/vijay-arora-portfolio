@@ -310,8 +310,7 @@ const Contact = () => {
                 </Button>
                 </div>
               </form>
-              </Card>
-            </div>
+            </Card>
           </div>
         </div>
       </div>
