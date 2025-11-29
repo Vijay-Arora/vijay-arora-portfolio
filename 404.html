@@ -6,8 +6,8 @@
     <meta http-equiv="refresh" content="0; url=./" />
     <script type="text/javascript">
       (function(l) {
-        // Root deployment: no path segments to keep
-        var pathSegmentsToKeep = 0;
+        // GitHub project pages: keep '/vijay-arora-portfolio'
+        var pathSegmentsToKeep = 1;
         var path = l.pathname.split('/').slice(0, 1 + pathSegmentsToKeep).join('/') + '/';
         var newUrl = l.protocol + '//' + l.host + path + '?p=' +
           l.pathname.slice(path.length).replace(/\//g, '\u002f') +
