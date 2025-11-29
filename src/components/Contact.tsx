@@ -244,10 +244,11 @@ const Contact = () => {
 
           {/* Contact Form */}
           <div className="animate-slide-up" style={{ animationDelay: "0.3s" }}>
-            <Card className="glass-card p-6 sm:p-8 flex-1 flex flex-col h-full">
+            <div className="h-full flex flex-col">
               <h3 className="text-2xl font-bold mb-4 sm:mb-6 text-foreground">
                 Send a Message
               </h3>
+              <Card className="glass-card p-6 sm:p-8 flex-1 flex flex-col">
               
               <form onSubmit={handleSubmit} className="space-y-6 flex-1 flex flex-col">
                 <div>
@@ -310,7 +311,8 @@ const Contact = () => {
                 </Button>
                 </div>
               </form>
-            </Card>
+              </Card>
+            </div>
           </div>
         </div>
       </div>
