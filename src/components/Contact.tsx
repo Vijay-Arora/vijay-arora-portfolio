@@ -153,9 +153,9 @@ const Contact = () => {
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-start">
+        <div className="grid lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-12 items-start">
           {/* Contact Information */}
-          <div className="space-y-6 lg:space-y-8">
+          <div className="space-y-5 sm:space-y-6 lg:space-y-8">
             <div className="animate-slide-up">
               <h3 className="text-2xl font-bold mb-4 sm:mb-6 text-foreground">
                 Contact Information
@@ -163,19 +163,19 @@ const Contact = () => {
               
               {/* Email */}
               <Card className="glass-card hover-glow p-4 sm:p-6 mb-4">
-                <div className="flex items-center justify-between">
-                  <div className="flex items-center gap-4">
-                    <Mail className="w-6 h-6 text-primary" />
-                    <div>
-                      <p className="font-medium text-foreground">Email</p>
-                      <p className="text-muted-foreground">{contactInfo.email}</p>
+                <div className="flex items-center justify-between gap-3">
+                  <div className="flex items-center gap-3 sm:gap-4 flex-1 min-w-0">
+                    <Mail className="w-5 h-5 sm:w-6 sm:h-6 text-primary flex-shrink-0" />
+                    <div className="min-w-0 flex-1">
+                      <p className="font-medium text-foreground text-sm sm:text-base">Email</p>
+                      <p className="text-muted-foreground text-xs sm:text-sm truncate">{contactInfo.email}</p>
                     </div>
                   </div>
                   <Button
                     variant="ghost"
                     size="sm"
                     onClick={() => copyToClipboard(contactInfo.email, "email")}
-                    className="hover-glow"
+                    className="hover-glow flex-shrink-0"
                   >
                     {copiedEmail ? <Check className="w-4 h-4" /> : <Copy className="w-4 h-4" />}
                   </Button>
@@ -184,19 +184,19 @@ const Contact = () => {
 
               {/* Phone */}
               <Card className="glass-card hover-glow p-4 sm:p-6">
-                <div className="flex items-center justify-between">
-                  <div className="flex items-center gap-4">
-                    <Phone className="w-6 h-6 text-primary" />
-                    <div>
-                      <p className="font-medium text-foreground">Phone</p>
-                      <p className="text-muted-foreground">{contactInfo.phone}</p>
+                <div className="flex items-center justify-between gap-3">
+                  <div className="flex items-center gap-3 sm:gap-4 flex-1 min-w-0">
+                    <Phone className="w-5 h-5 sm:w-6 sm:h-6 text-primary flex-shrink-0" />
+                    <div className="min-w-0 flex-1">
+                      <p className="font-medium text-foreground text-sm sm:text-base">Phone</p>
+                      <p className="text-muted-foreground text-xs sm:text-sm">{contactInfo.phone}</p>
                     </div>
                   </div>
                   <Button
                     variant="ghost"
                     size="sm"
                     onClick={() => copyToClipboard(contactInfo.phone, "phone")}
-                    className="hover-glow"
+                    className="hover-glow flex-shrink-0"
                   >
                     {copiedPhone ? <Check className="w-4 h-4" /> : <Copy className="w-4 h-4" />}
                   </Button>
@@ -211,17 +211,17 @@ const Contact = () => {
               </h4>
               <div className="space-y-3">
                 {socialLinks.map((social, index) => (
-                  <Card key={social.name} className="glass-card hover-glow p-4 sm:p-4">
+                  <Card key={social.name} className="glass-card hover-glow p-4">
                     <a
                       href={social.url}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex items-center gap-4 w-full text-left"
+                      className="flex items-center gap-3 sm:gap-4 w-full text-left"
                     >
-                      <social.icon className="w-5 h-5 text-primary" />
-                      <div>
-                        <p className="font-medium text-foreground">{social.name}</p>
-                        <p className="text-sm text-muted-foreground">{social.handle}</p>
+                      <social.icon className="w-5 h-5 text-primary flex-shrink-0" />
+                      <div className="min-w-0 flex-1">
+                        <p className="font-medium text-foreground text-sm sm:text-base">{social.name}</p>
+                        <p className="text-xs sm:text-sm text-muted-foreground truncate">{social.handle}</p>
                       </div>
                     </a>
                   </Card>
@@ -248,7 +248,7 @@ const Contact = () => {
               <h3 className="text-2xl font-bold mb-4 sm:mb-6 text-foreground">
                 Send a Message
               </h3>
-              <Card className="glass-card p-6 sm:p-8 flex-1 flex flex-col">
+              <Card className="glass-card p-4 sm:p-6 lg:p-8 flex-1 flex flex-col">
               
               <form onSubmit={handleSubmit} className="space-y-6 flex-1 flex flex-col">
                 <div>
