@@ -26,8 +26,9 @@ const Header = () => {
 
   const downloadResume = () => {
     try {
-      // Path to resume file in public folder
-      const resumePath = './public/CV_Vijay_Arora.pdf';
+      // Path to resume file in public folder (served from root in production)
+      const basePath = import.meta.env.PROD ? '/vijay-arora-portfolio' : '';
+      const resumePath = `${basePath}/CV_Vijay_Arora.pdf`;
       
       // Create a temporary anchor element to trigger download
       const link = document.createElement('a');
