@@ -149,11 +149,11 @@ const Contact = () => {
             Get In <span className="gradient-text">Touch</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Open to internships, collaborations, and interesting data projects
+            Open to work and collaborations
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-12 items-start w-full">
+        <div className="grid lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-12 items-stretch w-full">
           {/* Contact Information */}
           <div className="space-y-5 sm:space-y-6 lg:space-y-8">
             <div className="animate-slide-up">
@@ -243,12 +243,11 @@ const Contact = () => {
           </div>
 
           {/* Contact Form */}
-          <div className="animate-slide-up" style={{ animationDelay: "0.3s" }}>
-            <div className="h-full flex flex-col">
-              <h3 className="text-2xl font-bold mb-4 sm:mb-6 text-foreground">
-                Send a Message
-              </h3>
-              <Card className="glass-card p-4 sm:p-6 lg:p-8 flex-1 flex flex-col">
+          <div className="animate-slide-up flex flex-col" style={{ animationDelay: "0.3s" }}>
+            <h3 className="text-2xl font-bold mb-4 sm:mb-6 text-foreground">
+              Send a Message
+            </h3>
+            <Card className="glass-card p-4 sm:p-6 lg:p-8 flex-1 flex flex-col min-h-0">
               
               <form onSubmit={handleSubmit} className="space-y-6 flex-1 flex flex-col">
                 <div>
