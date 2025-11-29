@@ -153,16 +153,16 @@ const Contact = () => {
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-stretch">
+        <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-start">
           {/* Contact Information */}
-          <div className="space-y-8">
+          <div className="space-y-6 lg:space-y-8">
             <div className="animate-slide-up">
-              <h3 className="text-2xl font-bold mb-6 text-foreground">
+              <h3 className="text-2xl font-bold mb-4 sm:mb-6 text-foreground">
                 Contact Information
               </h3>
               
               {/* Email */}
-              <Card className="glass-card hover-glow p-6 mb-4">
+              <Card className="glass-card hover-glow p-4 sm:p-6 mb-4">
                 <div className="flex items-center justify-between">
                   <div className="flex items-center gap-4">
                     <Mail className="w-6 h-6 text-primary" />
@@ -183,7 +183,7 @@ const Contact = () => {
               </Card>
 
               {/* Phone */}
-              <Card className="glass-card hover-glow p-6">
+              <Card className="glass-card hover-glow p-4 sm:p-6">
                 <div className="flex items-center justify-between">
                   <div className="flex items-center gap-4">
                     <Phone className="w-6 h-6 text-primary" />
@@ -211,7 +211,7 @@ const Contact = () => {
               </h4>
               <div className="space-y-3">
                 {socialLinks.map((social, index) => (
-                  <Card key={social.name} className="glass-card hover-glow p-4">
+                  <Card key={social.name} className="glass-card hover-glow p-4 sm:p-4">
                     <a
                       href={social.url}
                       target="_blank"
@@ -243,9 +243,9 @@ const Contact = () => {
           </div>
 
           {/* Contact Form */}
-          <div className="animate-slide-up flex" style={{ animationDelay: "0.3s" }}>
-            <Card className="glass-card p-6 sm:p-8 mt-0 lg:mt-[calc(4rem-2mm)] flex-1 flex flex-col">
-              <h3 className="text-2xl font-bold mb-6 text-foreground">
+          <div className="animate-slide-up" style={{ animationDelay: "0.3s" }}>
+            <Card className="glass-card p-6 sm:p-8 flex-1 flex flex-col h-full">
+              <h3 className="text-2xl font-bold mb-4 sm:mb-6 text-foreground">
                 Send a Message
               </h3>
               
