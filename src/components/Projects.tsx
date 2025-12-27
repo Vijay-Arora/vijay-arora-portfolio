@@ -10,30 +10,32 @@ const Projects = () => {
   const projects = [
     {
       id: 1,
-      title: "Financial Market Dashboard",
-      tagline: "Interactive market & crypto dashboard",
+      title: "Exploratory Data Analysis on European Financial Data",
+      tagline: "Insights from European markets",
       image: "/vijay-arora-portfolio/Financial_Market_Dashboard.png",
-      description: "Integrated 10+ stock market & crypto APIs to track price trends, trading volume, and sector performance. Delivered insights that could simulate portfolio performance with 95% data accuracy.",
-      techStack: ["Power BI", "SQL", "Python", "APIs"],
+      description: "Performed in-depth exploratory data analysis on European financial datasets to uncover trends, correlations, and risk patterns across sectors and countries. Delivered data-driven insights using statistical analysis and visual storytelling.",
+      techStack: ["Python", "Pandas", "NumPy", "Matplotlib", "Seaborn"],
+      githubLink: "https://github.com/Vijay-Arora/EDA-Financial-Data",
       caseStudy: {
-        problem: "Need for real-time financial market insights and portfolio performance tracking across multiple asset classes.",
-        approach: "Integrated multiple APIs, built ETL pipelines, and created interactive visualizations with automated data refresh.",
-        result: "95% data accuracy with real-time updates, enabling informed investment decisions.",
-        learned: "API integration, real-time data processing, and financial data visualization best practices."
+        problem: "Large and complex European financial datasets lacked clear insights for decision-making.",
+    approach: "Cleaned and preprocessed data, performed univariate and multivariate analysis, analyzed correlations, distributions, and sector-wise performance, and visualized key financial indicators.",
+    result: "Identified major trends, high-risk sectors, and strong correlations between financial indicators across regions.",
+    learned: "Advanced EDA techniques, data cleaning strategies, and effective financial data visualization."
       }
     },
     {
       id: 2,
-      title: "Customer Churn Prediction",
-      tagline: "Predictive model for churn",
+      title: "Time Series Analysis for Financial Forecasting",
+      tagline: "Forecasting trends over time",
       image: "/vijay-arora-portfolio/Customer_Churn_Prediction.png",
-      description: "Built a machine learning model using Logistic Regression, Random Forest, and XGBoost to predict customer churn with 90% accuracy. Created a dashboard visualization that translated predictions into business actions.",
-      techStack: ["Python", "Scikit-learn", "XGBoost", "Pandas", "Matplotlib"],
+      description: "Developed a time series forecasting model to analyze historical financial data and predict future trends. Applied statistical and machine learning techniques to capture seasonality, trends, and volatility in financial markets.",
+      techStack: ["Python", "Pandas", "Statsmodels", "Scikit-learn", "Matplotlib"],
+      githubLink: "https://github.com/Vijay-Arora/Time-Series-Analysis",
       caseStudy: {
-        problem: "High customer churn rates without predictive insights for proactive retention strategies.",
-        approach: "Analyzed customer data, engineered features, compared multiple ML algorithms, and built an interpretable model.",
-        result: "90% prediction accuracy with actionable insights for customer retention strategies.",
-        learned: "Feature engineering, model comparison, and translating ML insights into business actions."
+        problem: "Financial trends were difficult to predict due to seasonality and market volatility.",
+        approach: "Performed time series decomposition, stationarity tests, and built forecasting models using ARIMA/SARIMA and regression-based approaches.",
+        result: "Accurate trend and seasonality forecasts that supported better financial planning and decision-making.",
+        learned: "Time series decomposition, forecasting techniques, and handling real-world financial volatility."
       }
     },
     {
@@ -43,6 +45,7 @@ const Projects = () => {
       image: "/vijay-arora-portfolio/Submission_Triage_for_Motor_Insurance.png",
       description: "Developed an automated submission triage solution for motor insurance data, integrating real-time pipelines and classification model comparison.",
       techStack: ["Python", "Kafka", "KSQLDB", "Machine Learning"],
+      githubLink: "https://github.com/Vijay-Arora/motor-insurance-submission-data-prediction",
       caseStudy: {
         problem: "Inefficient manual triage of motor insurance submissions leading to delays in underwriting and inconsistent risk assessment.",
         approach: "Performed detailed EDA using Python, built a real-time data preprocessing pipeline using Kafka & KSQLDB, and compared multiple classification models to determine the best-performing approach for real-world submission classification.",
@@ -121,35 +124,29 @@ const Projects = () => {
 
                     {/* Action Buttons */}
                     <div className="flex flex-wrap gap-2 sm:gap-4 pt-4">
+                      {project.githubLink && (
+                        <Button 
+                          variant="outline" 
+                          size="sm" 
+                          className="glass-card"
+                          asChild
+                        >
+                          <a 
+                            href={project.githubLink} 
+                            target="_blank" 
+                            rel="noopener noreferrer"
+                          >
+                            <Github className="w-4 h-4 mr-2" />
+                            GitHub
+                          </a>
+                        </Button>
+                      )}
                       <Button 
                         variant="outline" 
                         size="sm" 
                         className="glass-card"
                         asChild
                       >
-                        <a 
-                          href="https://github.com/example" 
-                          target="_blank" 
-                          rel="noopener noreferrer"
-                        >
-                          <Github className="w-4 h-4 mr-2" />
-                          GitHub
-                        </a>
-                      </Button>
-                      <Button 
-                        variant="outline" 
-                        size="sm" 
-                        className="glass-card"
-                        asChild
-                      >
-                        <a 
-                          href="https://example.com" 
-                          target="_blank" 
-                          rel="noopener noreferrer"
-                        >
-                          <ExternalLink className="w-4 h-4 mr-2" />
-                          Demo
-                        </a>
                       </Button>
                       <Button
                         variant="ghost"
