@@ -5,8 +5,8 @@ import { MapPin, Calendar, Briefcase, GraduationCap, Award } from "lucide-react"
 const Experience = () => {
   const experiences = [
     {
-      company: "Ameriprise Financial (Columbia Threadneedle), Gurugram",
-      role: "Senior Data Analyst – Investments",
+      company: "Columbia Threadneedle Investments (Ameriprise Financial), Gurugram",
+      role: "Lead Analyst – Research Advanced Analytics",
       period: "11/2023 – Present",
       location: "Gurugram",
       achievements: [
